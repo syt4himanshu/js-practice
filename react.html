@@ -9,7 +9,6 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Optional: Basic Styling -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,6 +38,7 @@
       color: white;
       border-radius: 5px;
       cursor: pointer;
+      margin: 0.25rem;
     }
     .counter-box button:hover {
       background-color: #0056b3;
@@ -48,8 +48,13 @@
 <body>
   <div id="root"></div>
 
-  <!-- React code with Babel (JSX allowed) -->
   <script type="text/babel">
+    function YearDisplay() {
+      return (
+        <p>The current year is: {new Date().getFullYear()}</p>
+      );
+    }
+
     function Counter() {
       const [count, setCount] = React.useState(0);
 
@@ -57,6 +62,9 @@
         <div className="counter-box">
           <h1>Count: {count}</h1>
           <button onClick={() => setCount(count + 1)}>Increment</button>
+          <button onClick={() => setCount(count - 1)}>Decrement</button>
+          <button onClick={() => setCount(0)}>Reset</button>
+          <YearDisplay />
         </div>
       );
     }
