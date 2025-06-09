@@ -1,0 +1,21 @@
+{
+  "name": "farmers-weather-assistant",
+  "version": "1.0.0",
+  "description": "A weather assistant application for farmers",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "mkdir dist && cp -r Assistent/micro/* dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "farming",
+    "agriculture"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+} 
